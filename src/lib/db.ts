@@ -9,5 +9,5 @@ const prisma =
   globalForPrisma.prisma || new PrismaClient().$extends(withAccelerate());
 
 if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
-const db = prisma;
+const db = prisma; // Exporting Prisma client
 export default db;

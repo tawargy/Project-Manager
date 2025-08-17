@@ -13,8 +13,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 //import { useAuth } from "@/contexts/auth-context";
 
-import { useSession, signOut, signIn } from "next-auth/react";
-import { LogOut, Settings, User } from "lucide-react";
+import { useSession, signOut } from "next-auth/react";
+import { LogOut, User } from "lucide-react";
 
 export function DashboardHeader() {
   //const { user, logout } = useAuth();
@@ -76,7 +76,9 @@ export function DashboardHeader() {
                 <div className="text-right flex gap-2">
                   <p className="text-sm font-medium">{user.username}</p>
                   <p
-                    className={`text-xs px-2 py-1 rounded-full ${getRoleBadgeColor(user.role)}`}
+                    className={`text-xs px-2 py-1 rounded-full ${getRoleBadgeColor(
+                      user.role
+                    )}`}
                   >
                     {user.role}
                   </p>
